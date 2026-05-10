@@ -1,3 +1,106 @@
-body { font-family: sans-serif; background-color: #f4f4f4; color: #333; padding: 20px; }
-.comando { background: white; padding: 15px; margin-bottom: 10px; border-left: 5px solid #2ecc71; border-radius: 4px; }
-h1 { color: #2c3e50; }
+/* ===== RESET SUAVE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  color: #333;
+  padding: 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ===== CONTENEDOR ===== */
+#contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ===== TARJETAS ===== */
+.comando {
+  background: white;
+  padding: 18px;
+  border-left: 6px solid #2ecc71;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.comando:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* ===== TEXTOS ===== */
+.comando h2 {
+  font-size: 1.3rem;
+  color: #27ae60;
+  margin-bottom: 8px;
+}
+
+.comando p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 600px) {
+  #contenedor {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .comando {
+    padding: 20px;
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 900px) {
+  #contenedor {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .comando h2 {
+    font-size: 1.4rem;
+  }
+
+  .comando p {
+    font-size: 1rem;
+  }
+}
